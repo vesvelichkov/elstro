@@ -1,0 +1,15 @@
+// Footer
+
+.footer {
+  margin-top: 1.5rem;
+  font-family: 'yanone', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  color: #ccc;
+  transition: opacity 0.325s ease-in;
+  transition-delay: 0.25s;
+
+  p {
+    &:last-child { margin-bottom: 0; }
+  }
+}

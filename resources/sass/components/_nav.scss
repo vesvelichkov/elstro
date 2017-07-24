@@ -1,0 +1,36 @@
+// Navigation
+
+.nav {
+
+  ul {
+    display: flex;
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+    border: solid 1px #fff;
+    // border-radius: 4px;
+  }
+
+  li {
+    min-width: 6.5rem;
+
+    &:not(:first-child) {
+      border-left: solid 1px #fff;
+    }
+  }
+
+  .nav-link {
+    font-size: .875rem;
+    color: #fff;
+    text-transform: uppercase;
+    transition: background-color .15s ease-in-out;
+
+    &:hover {
+      background-color: rgba(#fff, .075);
+    }
+
+    &:active {
+      background-color: rgba(#fff, .175);
+    }
+  }
+}

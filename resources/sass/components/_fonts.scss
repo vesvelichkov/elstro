@@ -1,0 +1,40 @@
+// Fonts
+
+$font-path: '../fonts/';
+
+// Play
+@font-face {
+    font-family: 'play';
+    src: url('#{$font-path}play-regular.woff2') format('woff2'),
+         url('#{$font-path}play-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'play';
+    src: url('#{$font-path}play-bold.woff2') format('woff2'),
+         url('#{$font-path}play-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+// Yanone
+@font-face {
+    font-family: 'yanone';
+    src: url('#{$font-path}yanonekaffeesatz-light.woff2') format('woff2'),
+         url('#{$font-path}yanonekaffeesatz-light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'yanone';
+    src: url('#{$font-path}yanonekaffeesatz-regular.woff2') format('woff2'),
+         url('#{$font-path}yanonekaffeesatz-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+
+}

@@ -1,0 +1,35 @@
+<form name="contactForm" ng-submit="submitForm()" ng-controller="formCtrl as form" novalidate>
+    <div class="input-container"
+         data-ng-class="{ 'has-danger' : submitted && contactForm.name.$invalid || contactForm.name.$invalid && contactForm.name.$touched }">
+        <input class="" id="name" type="text" name="name" ng-model="formModel.name"  required>
+        <label for="name">Име</label>
+
+        <ng-messages class="ng-cloak" for="contactForm.name.$error" ng-if="submitted || contactForm.name.$touched" role="alert">
+            <ng-message when="required">Полето е задължително</ng-message>
+            <ng-message when="minlength">Името трябва да съдържа минимум три символа</ng-message>
+        </ng-messages>
+    </div>
+
+    <div class="form-group"
+         data-ng-class="{ 'has-danger' : submitted && contactForm.email.$invalid || contactForm.email.$invalid && contactForm.email.$touched }">
+        <label for="email">Имейл адрес</label>
+        <input class="form-control" id="email" type="email" name="email" ng-model="formModel.email" required>
+        <ng-messages class="ng-cloak" for="contactForm.email.$error" ng-if="submitted || contactForm.email.$touched" role="alert">
+            <ng-message when="required">Полето е задължително</ng-message>
+            <ng-message when="email">Имейлът е невалиден</ng-message>
+        </ng-messages>
+    </div>
+
+
+    <div class="form-group"
+         data-ng-class="{ 'has-danger' : submitted && contactForm.message.$invalid || contactForm.message.$invalid && contactForm.message.$touched }">
+        <label for="message">Съобщение:</label>
+        <textarea class="form-control" id="message" type="text" name="message" ng-model="formModel.message" ng-maxlength="2000" required></textarea>
+        <ng-messages class="ng-cloak" for="contactForm.message.$error" ng-if="submitted || contactForm.message.$touched" role="alert">
+              <ng-message when="required">Полето е задължително</ng-message>
+              <ng-message when="maxlength">Съобщението не може да съдържа повече от 2000 символа.</ng-message>
+        </ng-messages>
+    </div>
+
+    <button class="btn btn-primary btn-block" role="button" type="submit">Изпрати</button>
+</form>
