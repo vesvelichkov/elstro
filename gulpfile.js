@@ -10,10 +10,8 @@ var gulp        = require('gulp'),
     stripDebug  = require('gulp-strip-debug'),
     prefix      = require('gulp-autoprefixer'),
     imagemin    = require('gulp-imagemin'),
-    rev         = require('gulp-rev'),
     del         = require('del'),
-    pngquant    = require('imagemin-pngquant'),
-    vinylPaths  = require('vinyl-paths');
+    pngquant    = require('imagemin-pngquant');
 
 
 // A list of JS files to compile,
