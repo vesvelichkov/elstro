@@ -6,10 +6,18 @@
   font-weight: 300;
   text-align: center;
   color: #ccc;
-  transition: opacity 0.325s ease-in;
-  transition-delay: 0.25s;
+  // transition: opacity 0.325s ease-in;
+  transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+  // transition-delay: 0.25s;
 
   p {
     &:last-child { margin-bottom: 0; }
   }
+
+    @at-root {
+        body.is-main-visible .footer {
+            filter: blur(0.125rem);
+            opacity: 0;
+        }
+    }
 }

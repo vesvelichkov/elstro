@@ -20,7 +20,7 @@
   }
 
   &:before {
-    transition: background-color 2.5s ease-in-out;
+    transition: background-color 2.5s ease; //TODO ease / linear or ... in-out
     transition-delay: 0.75s;
     background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url(../images/overlay.png);
     background-size: auto, 256px 256px;
@@ -31,7 +31,7 @@
 
   &:after {
     transform: scale(1.125);
-    transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out;
+    transition: transform 0.325s ease, filter 0.325s ease;
     background-image: url(../images/bg.jpg);
     background-position: center;
     background-size: cover;
@@ -40,7 +40,7 @@
   }
 
   @at-root {
-    body.is-article-visible .bg-img:after {
+    body.is-main-visible .bg-img:after {
       transform: scale(1.0825);
       filter: blur(0.2rem);
     }
@@ -50,4 +50,3 @@
     }
   }
 }
-

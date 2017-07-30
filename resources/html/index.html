@@ -11,24 +11,43 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/app.css">
 </head>
-<body class="is-loading">
+<body>
     <div class="shell">
         @@include('header.html')
-        <!-- @@include('main.html') -->
+        @@include('main.html')
         @@include('footer.html')
     </div>
     <div class="bg-img"></div>
-
     <!-- Scripts -->
     <script>
-        var body = document.getElementsByTagName('body')[0];
-        body.classList.add('is-loading');
+        // Loads content smoothly
+        var body  = document.getElementsByTagName('body')[0];
+        var main  = document.getElementById('main');
+        var close = document.getElementById('close');
 
+        body.classList.add('is-loading');
         window.addEventListener('load', function() {
             window.setTimeout(function() {
                 body.classList.remove('is-loading');
             }, 104);
         });
+
+
+        function showMain() {
+            body.classList.add('is-main-visible');
+            // main.style.display = 'block';
+        }
+        function hideMain() {
+            body.classList.remove('is-main-visible');
+        }
+
+        // When the user clicks anywhere outside of the main, close it
+        window.onclick = function(event) {
+            console.log(event.target == main);
+            if (event.target == main) {
+                hideMain();
+            }
+        }
     </script>
 </body>
 </html>
