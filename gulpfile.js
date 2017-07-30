@@ -113,7 +113,7 @@ gulp.task('imagemin', function () {
 
 // Watch Sass and JS files and compile them in dev mode.
 gulp.task('watch', ['html', 'sass', 'js', 'imagemin'], function() {
-    gulp.watch(['resources/html/**/*.html', 'resources/html/**/*.htm'], ['html']);
+    gulp.watch('resources/html/**/*.html', ['html']);
     gulp.watch('resources/sass/**/*.scss', ['sass']);
     gulp.watch('resources/js/**/*.js', ['js']);
 });
@@ -122,6 +122,7 @@ gulp.task('watch', ['html', 'sass', 'js', 'imagemin'], function() {
 gulp.task('default', [
     'angularjs',
     'angularjs-msg',
+    'fonts',
     'html',
     'sass',
     'js',

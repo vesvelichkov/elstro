@@ -1,4 +1,4 @@
-.page-bg {
+.bg-image {
   position: fixed;
   top: 0;
   left: 0;
@@ -40,12 +40,12 @@
   }
 
   @at-root {
-    body.is-article-visible .page-bg:after {
+    body.is-article-visible .bg-image:after {
       transform: scale(1.0825);
       filter: blur(0.2rem);
     }
 
-    body.is-loading .page-bg:before {
+    body.is-loading .bg-image:before {
       background-color: #000;
     }
   }
