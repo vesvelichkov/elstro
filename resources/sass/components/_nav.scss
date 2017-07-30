@@ -3,7 +3,8 @@
 .nav {
 
   ul {
-    display: flex;
+    display: table;
+    table-layout: fixed;
     margin-bottom: 0;
     list-style: none;
     padding-left: 0;
@@ -12,7 +13,23 @@
   }
 
   li {
-    min-width: 6.5rem;
+    display: table-cell;
+
+
+    &:first-child:nth-last-child(2),
+    &:first-child:nth-last-child(2) ~ li {
+        width: 50%;
+    }
+
+    &:first-child:nth-last-child(3),
+    &:first-child:nth-last-child(3) ~ li {
+        width: 33.3333%;
+    }
+
+    &:first-child:nth-last-child(4),
+    &:first-child:nth-last-child(4) ~ li {
+        width: 25%;
+    }
 
     &:not(:first-child) {
       border-left: solid 1px #fff;
@@ -21,8 +38,10 @@
 
   .nav-link {
     font-size: .875rem;
+    letter-spacing: .1em
     color: #fff;
     text-transform: uppercase;
+    white-space: nowrap;
     transition: background-color .15s ease-in-out;
 
     &:hover {
