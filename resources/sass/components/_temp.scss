@@ -156,17 +156,17 @@ body.is-loading *, body.is-loading *:before, body.is-loading *:after {
 .main {
     position: absolute;
     top: 0;
-    right: 0;
     bottom: 0;
-    left: 0;
     z-index: -1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
+    padding: 0 1rem;
 
     opacity: 0;
+    transition: opacity .25s ease-in;
+
     // visibility: hidden;
 
     article {
@@ -182,7 +182,7 @@ body.is-loading *, body.is-loading *:before, body.is-loading *:after {
             opacity: 1;
             z-index: 2;
             // visibility: visible;
-            transition: opacity .325s ease;
+            // transition: opacity .325s ease, visibility 0s;
             transition-delay: 0.25s;
         }
     }
