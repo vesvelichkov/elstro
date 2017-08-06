@@ -32,7 +32,6 @@
             }, 104);
         });
 
-
         function showMain() {
             body.classList.add('is-main-visible');
             // main.style.display = 'block';
@@ -43,11 +42,17 @@
 
         // When the user clicks anywhere outside of the main, close it
         window.onclick = function(event) {
-            console.log(event.target == main);
             if (event.target == main) {
                 hideMain();
             }
         }
+
+        document.onkeyup = function(evt) {
+            evt = evt || window.event;
+            if (evt.keyCode == 27) {
+                hideMain();
+            }
+        };
     </script>
 </body>
 </html>

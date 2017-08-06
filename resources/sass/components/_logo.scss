@@ -1,6 +1,9 @@
 // Logo
 
 .logo {
+    min-width: 150px;
+    padding-bottom: 25px;
+
     .curve {
         position: absolute;
         bottom: 0;
@@ -25,7 +28,5 @@
 
     svg {
         width: 3.5rem;
-        margin-bottom: 25px;
-        line-height: 1;
     }
 }

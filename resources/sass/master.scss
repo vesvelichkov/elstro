@@ -6,8 +6,11 @@
 // Vendor
 @import 'bootstrap/scss/bootstrap';
 
+// TODO: remove/transfer
+@import '_temp';
+
 // Components
-@import 'components/_temp';
+@import 'components/_buttons';
 
 @import 'components/_header';
 @import 'components/_footer';

@@ -8,6 +8,16 @@ html {
     font-size: 16px;
 }
 
+svg {
+
+    &[type='icon'] {
+        width: 1em;
+        // height: 1em;
+        line-height: 1;
+        vertical-align: middle;
+    }
+}
+
 .shell {
     display: flex;
     flex-direction: column;
@@ -63,7 +73,6 @@ html {
         position: absolute;
         top: calc(-#{$spacing-sm} - 1px);
         left: 50%;
-        // left: calc(50% - 1px);
         content: '';
         width: 1px;
         height: calc(#{$spacing-sm} + 1px);
@@ -156,20 +165,22 @@ body.is-loading *, body.is-loading *:before, body.is-loading *:after {
 .main {
     position: absolute;
     top: 0;
+    right: 0;
     bottom: 0;
+    left: 0;
     z-index: -1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0 1rem;
-
     opacity: 0;
     transition: opacity .25s ease-in;
 
     // visibility: hidden;
 
     article {
+        position: relative;
         padding: 3.5rem 2.5rem 1.5rem 2.5rem;
         max-width: 52rem;
         background-color: rgba(#1b1f22, .85);
@@ -187,4 +198,11 @@ body.is-loading *, body.is-loading *:before, body.is-loading *:after {
         }
     }
 
+
+    // Close button
+    .btn-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }
