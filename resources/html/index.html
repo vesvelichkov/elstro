@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Електростроежи АД - гр. Хасково</title>
     <meta name="description" content="Проучване, проектиране, строителство и поддържане на електрически мрежи, подстанции и трафопостове.">
@@ -66,15 +66,18 @@
             }
             // Show article by given id
             document.getElementById(id).style.display = 'block';
+            document.getElementById(id).appendChild(close);
         }
 
-        [].forEach.call(navLinks, function (link) {
-            link.onclick = function() {
+        for(var i = 0; i < navLinks.length; i++) {
+            navLinks[i].onclick = function() {
                 showMain();
                 showArticle(this.getAttribute('href').substring(1));
-                // return false;
-            };
-        });
+                return false;
+            }
+        }
+
+        // [].forEach.call(navLinks, function (link) { });
 
         //======== TODO end
 
