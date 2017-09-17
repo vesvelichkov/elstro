@@ -24,6 +24,7 @@
         var body  = document.getElementsByTagName('body')[0];
         var main  = document.getElementById('main');
         var close = document.getElementById('close');
+        var navLink = document.getElementsByClassName('nav-link');
 
         body.classList.add('is-loading');
         window.addEventListener('load', function() {
@@ -53,6 +54,30 @@
                 hideMain();
             }
         };
+
+        //======== TODO
+        var navLinks = document.getElementsByClassName('nav-link');
+        var articles = document.getElementsByClassName('article');
+
+        function showArticle(id) {
+            // Hide all artticles
+            for(var i = 0; i < articles.length; i++) {
+                articles[i].style.display = 'none';
+            }
+            // Show article by given id
+            document.getElementById(id).style.display = 'block';
+        }
+
+        [].forEach.call(navLinks, function (link) {
+            link.onclick = function() {
+                showMain();
+                showArticle(this.getAttribute('href').substring(1));
+                // return false;
+            };
+        });
+
+        //======== TODO end
+
     </script>
 </body>
 </html>
